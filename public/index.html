@@ -1,0 +1,38 @@
+<html>
+
+  <head>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/jquery-1.10.0.min.js"></script>
+    <script src="/jquery.timeago.js"></script>
+    <script src="/jquery.cookie.js"></script>
+    <script src="/uuid.js"></script>
+    <script src="/client.js"></script>
+    <link href="/styles.css" rel="stylesheet" type="text/css" media="screen"/>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+  </head>
+
+  <body>
+    <div id="chat">
+      <div class="container">
+        <table id="conversation">
+          <tbody></tbody>
+        </table>
+        <div id="comment">
+          <div class="inner">
+            <textarea id="the-comment"></textarea>
+            <input type="button" id="send" value="Send"/>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="presence">
+      <div class="container">
+        <h3>Who's here?</h3>
+        <ul id="users"></ul>
+      </div>
+      <a id="toggle-sound" href="#toggle-sound">Toggle a sound notification when someone types your username.</a>
+    </div>
+    <audio id="ding" src="ding.wav"></audio>
+  </body>
+
+</html>

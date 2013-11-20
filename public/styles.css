@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  font-family: 'Lucida Grande', verdana, arial, helvetica, sans-serif;
+  font-size: 90%;
+  background: #1b1b24;
+  color: #d6e0e4; }
+
+body {
+  position: relative; }
+
+li {
+  list-style-type: none; }
+
+.container {
+  padding: 20px; }
+
+#chat {
+  width: 85%;
+  padding-bottom: 80px; }
+  #chat #comment {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 85%;
+    background: #1b1b24; }
+    #chat #comment .inner {
+      margin: 20px; }
+      #chat #comment .inner textarea {
+        width: 85%;
+        height: 50px;
+        padding: 5px;
+        background: #303a40;
+        color: #d6e0e4;
+        border: none;
+        font-family: 'Lucida Grande';
+        font-size: 14px; }
+      #chat #comment .inner input[type="button"] {
+        vertical-align: top;
+        background: #21a7d4;
+        color: #fff;
+        padding: 4px 8px;
+        border-radius: 3px;
+        border: none;
+        margin-left: 5px; }
+  #chat #conversation {
+    width: 100%;
+    font-size: 95%;
+    border-collapse: collapse; }
+    #chat #conversation td {
+      padding: 7px;
+      vertical-align: top; }
+    #chat #conversation td.username {
+      font-weight: 700;
+      width: 1%;
+      padding-right: 10px;
+      border-right: 1px solid #2c2c35;
+      white-space: nowrap; }
+    #chat #conversation td.comment {
+      padding-left: 10px; }
+    #chat #conversation td.join, #chat #conversation td.disconnect {
+      color: #4e4e57;
+      font-size: 90%; }
+    #chat #conversation td.join {
+      color: #21a7d4; }
+    #chat #conversation td.timeago {
+      width: 100px;
+      text-align: right;
+      color: #4e4e57; }
+    #chat #conversation tr.me td {
+      background: #202029; }
+    #chat #conversation tr.pending td {
+      opacity: 0.3; }
+
+#presence {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 15%;
+  background: #262631; }
+  #presence h3 {
+    margin-bottom: 1em; }
+  #presence #toggle-sound {
+    display: block;
+    padding: 0 10px 0 34px;
+    height: 24px;
+    background: transparent url(../images/speaker.png) no-repeat 0 0;
+    background-size: 24px 48px;
+    position: absolute;
+    bottom: 50px;
+    left: 20px;
+    opacity: 0.3;
+    color: #ccc;
+    font-size: 0.8em;
+    text-decoration: none; }
+    #presence #toggle-sound:hover {
+      opacity: 1.0; }
+    #presence #toggle-sound.off {
+      background-position: 0 -24px; }
+
+@media screen and (max-device-width: 480px) {
+  #chat {
+    width: 100%; }
+    #chat .container {
+      padding: 0; }
+    #chat #comment {
+      width: 100%;
+      background: #f7f7f7; }
+      #chat #comment .inner {
+        margin: 5px; }
+        #chat #comment .inner textarea {
+          width: 70%;
+          height: 30px;
+          background: #fff;
+          border: 1px solid #ccc; }
+    #chat #conversation td.timeago {
+      display: none; }
+
+  #presence {
+    display: none; } }

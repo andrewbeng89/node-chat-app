@@ -1,0 +1,10 @@
+{
+     "name": "simple_chat",
+     "description": "example chat application with socket.io",
+     "version": "0.0.1",
+     "dependencies": {
+        "express": "",
+        "socket.io": "",
+        "fdb": ""
+     }
+}

@@ -177,7 +177,7 @@ function lookup_latest_and_start_polling() {
     iterator.toArray(function(err, chats) {
       var most_recent = chats[0]
       if (most_recent) {
-        id = fdb.tuple.unpack(most_recent)[1] + 1
+        id = fdb.tuple.unpack(most_recent.key)[1] + 1
       }
       setInterval(check_db_for_updates, 1000)
     })

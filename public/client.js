@@ -57,7 +57,7 @@ var sound_off = false, ding
 function check_for_sound_notification(chat) {
   if (!ding) return
   if (sound_off) return
-  //if (chat.user == my_name) return
+  if (chat.user == my_name) return
   if (chat.comment.toLowerCase().indexOf(my_name.toLowerCase()) == -1) return
   ding.play()
 }

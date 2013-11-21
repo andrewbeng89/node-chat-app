@@ -1,5 +1,3 @@
-// TODO: index/search, improve UI
-
 var express = require('express')
   , app = express()
   , http = require('http')
